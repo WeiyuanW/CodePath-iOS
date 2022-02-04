@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Tip Calculator"
+        
+        // Makes it more obvious want the focus is on startup
+//        billAmountTextField.becomeFirstResponder()
     }
 
     
@@ -44,8 +47,18 @@ class ViewController: UIViewController {
         tipAmountLabel.text = String(format: "$%.2f", tip)
         // Update Total Amount
         totalLabel.text = String(format:"$%.2f", total)
+        // Update split Amount (per person)
         splitAmountLabel.text = String(format:"$%.2f", splitAmount)
         
+        fadeInTotal()
+    }
+    
+    func fadeInTotal() {
+        self.totalLabel.alpha = 0
+        UIView.animate(withDuration: 1, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn,
+            animations: {
+                self.totalLabel.alpha = 1
+            }, completion: nil )
     }
     
 }
