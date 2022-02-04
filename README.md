@@ -32,6 +32,8 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+![Simulator Screen Recording - iPhone 12 - 2022-02-04 at 18 21 15](https://user-images.githubusercontent.com/66765006/152616931-a93f2b99-b238-4535-80f7-586b5a4838b3.gif)
+
 ## Notes
 
 Describe any challenges encountered while building the app.
