@@ -15,14 +15,14 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-* [ ] UI animations
+* [X] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
 * [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] User can adjust party size with a stepper, and split bill automaticlly.
 
 ## Video Walkthrough
 
@@ -32,7 +32,7 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-![Simulator Screen Recording - iPhone 12 - 2022-02-04 at 18 21 15](https://user-images.githubusercontent.com/66765006/152616931-a93f2b99-b238-4535-80f7-586b5a4838b3.gif)
+![Simulator Screen Recording - iPhone 12 - 2022-02-04 at 18 21 15](https://user-images.githubusercontent.com/66765006/152617814-9ccc260e-a5a9-42ab-bba1-e75f51c92d1f.gif)
 
 ## Notes
 
