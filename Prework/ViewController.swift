@@ -9,14 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var partySize = 1
+    
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var partySizeLabel: UILabel!
+    @IBAction func stepper(_ sender: UIStepper) {
+        partySizeLabel.text = String(format:"%.0f", sender.value)
+        partySize = Int(sender.value)
+        calculateTip(tipControl)
+    }
+    @IBOutlet weak var splitAmountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Tip Calculator"
     }
 
     
@@ -28,11 +38,14 @@ class ViewController: UIViewController {
         let tipPercentages = [0.15, 0.18, 0.2]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
+        let splitAmount = total / Double(partySize)
         
         // Update Tip Amount Label
         tipAmountLabel.text = String(format: "$%.2f", tip)
         // Update Total Amount
         totalLabel.text = String(format:"$%.2f", total)
+        splitAmountLabel.text = String(format:"$%.2f", splitAmount)
+        
     }
     
 }
