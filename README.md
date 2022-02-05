@@ -23,12 +23,13 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] User can adjust party size with a stepper, and split bill automaticlly.
+- [X] User can adjust tip percentage with a slider, and output will change accordingly.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://g.recordit.co/BWT0VKuhRr.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/68AdFIhFyt.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
