@@ -10,18 +10,38 @@ import UIKit
 class ViewController: UIViewController {
 
     var partySize = 1
+    var tipPercent = 0.00
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountLabel: UILabel!
-    @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            tipPercent = 0.15
+            tipslidLable.text = "15"
+        } else if sender.selectedSegmentIndex == 1 {
+            tipPercent = 0.18
+            tipslidLable.text = "18"
+        } else if sender.selectedSegmentIndex == 2 {
+            tipPercent = 0.2
+            tipslidLable.text = "20"
+        }
+        calculateTip(segmentedControl)
+    }
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var partySizeLabel: UILabel!
     @IBAction func stepper(_ sender: UIStepper) {
         partySizeLabel.text = String(format:"%.0f", sender.value)
         partySize = Int(sender.value)
-        calculateTip(tipControl)
+        calculateTip(segmentedControl)
     }
     @IBOutlet weak var splitAmountLabel: UILabel!
+    @IBOutlet weak var tipslidLable: UILabel!
+    @IBAction func slider(_ sender: UISlider) {
+        tipslidLable.text = String(format:"%.0f", sender.value*100)
+        tipPercent = Double(sender.value)
+        calculateTip(segmentedControl)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +64,7 @@ class ViewController: UIViewController {
         let bill = Double(billAmountTextField.text!) ?? 0
         
         //Get Total tip by mutiplying tip * tipPercentage
-        let tipPercentages = [0.15, 0.18, 0.2]
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * tipPercent
         let total = bill + tip
         let splitAmount = total / Double(partySize)
         
