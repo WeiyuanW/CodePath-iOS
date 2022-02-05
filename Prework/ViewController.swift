@@ -25,8 +25,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Sets the title in the Navigation Bar
         self.title = "Tip Calculator"
+        
+        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
