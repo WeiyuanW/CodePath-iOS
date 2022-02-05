@@ -27,12 +27,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Tip Calculator"
-        
-        // Makes it more obvious want the focus is on startup
-//        billAmountTextField.becomeFirstResponder()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Show keyboard by default
+        billAmountTextField.becomeFirstResponder()
     }
 
-    
     @IBAction func calculateTip(_ sender: Any) {
         //Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
