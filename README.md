@@ -4,7 +4,7 @@
 
 Submitted by: **Weiyuan Wu**
 
-Time spent: **8** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
@@ -39,6 +39,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+1. I had implement the setting page, but userDefault method is not working for me, I can not carry the data from the setting page to main page.
+2. I have found some old coding example about "Remembering the bill amount across app restarts" and "Using locale-specific currency and currency thousands separators." task. but I need to spend more time on understanging the method behind the code. and I relized that some of the coding format is changed in the past few years.
 
 ## License
 
